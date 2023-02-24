@@ -22,8 +22,8 @@ function set_virtualenv () {
 function prompt_command {
     RETURN_VAL=$?;
     set_virtualenv
-    PS1_OK="${PYTHON_VIRTUALENV}[\u@\h: ${GREEN}\w${STOP_COLOR}]${YELLOW}$(parse_git_branch)${STOP_COLOR} ${GREEN}✓${STOP_COLOR} \n\$ "
-    PS1_ERROR="${PYTHON_VIRTUALENV}[\u@\h: ${GREEN}\w${STOP_COLOR}]${YELLOW}$(parse_git_branch)${STOP_COLOR} ${RED}(✗ ${RETURN_VAL})${STOP_COLOR}\n\$ "
+    PS1_OK="${PYTHON_VIRTUALENV}[\u@\h: ${GREEN}\w${STOP_COLOR}]${YELLOW}$(parse_git_branch)${STOP_COLOR} ${GREEN}\342\234\224${STOP_COLOR} \n\$ "
+    PS1_ERROR="${PYTHON_VIRTUALENV}[\u@\h: ${GREEN}\w${STOP_COLOR}]${YELLOW}$(parse_git_branch)${STOP_COLOR} ${RED}(\342\234\227 ${RETURN_VAL})${STOP_COLOR}\n\$ "
     if [ ${RETURN_VAL} = 0 ]; then
         PS1=${PS1_OK};
     else
