@@ -1,3 +1,10 @@
 
 [alias]
     lol = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cd) %C(bold blue)<%an>%Creset' --abbrev-commit --date=format-local:'%Y-%m-%d %H:%M'
+    ftp = fetch --tags --prune --prune-tags
+    sftp = submodule foreach --recursive \"git ftp\"
+    ssr = submodule sync --recursive
+    suir = submodule update --init --recursive
+
+[push]
+    recurseSubmodules = check
