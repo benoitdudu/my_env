@@ -1,0 +1,45 @@
+
+# Timeout for commands executed by starship (ms)
+command_timeout = 1000
+
+[battery]
+full_symbol = "• "
+charging_symbol = "⇡ "
+discharging_symbol = "⇣ "
+unknown_symbol = "❓ "
+empty_symbol = "❗ "
+
+[erlang]
+symbol = "ⓔ "
+
+[nodejs]
+symbol = "[⬢](bold green) "
+
+[pulumi]
+symbol = "🧊 "
+
+[cmake]
+disabled = true
+
+[directory]
+truncation_length = 0
+truncate_to_repo = false
+truncation_symbol = '...'
+
+[character]
+error_symbol = '[X](bold red)'
+
+[time]
+disabled = false
+
+[status]
+format = '[$status]($style) '
+disabled = false
+
+[cmd_duration]
+show_notifications = true
+notification_timeout = 600000
+
+[shell]
+disabled = false
+bash_indicator = ''
